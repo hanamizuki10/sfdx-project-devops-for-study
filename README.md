@@ -1,18 +1,32 @@
-# Salesforce DX Project: Next Steps
+# sfdx-project-devops-for-study
+`sf project generate --name sfdx-project-devops-for-study`のコマンドを実行して開始したSalesforce DX Projectです。
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+このリポジトリは、DevOps Center勉強用に作成したリポジトリです。
 
-## How Do You Plan to Deploy Your Changes?
+# 想定シーン
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+もともと変更セットを活用して、本番組織に機能リリースしていたけれど、DevOps Centerがリリースされ切り替えることを想定
+git checkout -b feature/1-ad-apex-class
 
-## Configure Your Salesforce DX Project
+# DevHub認証
+```
+sf org login web --set-default-dev-hub --alias devops-devhub
+```
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+# スクラッチ組織の作成（事前DevHub認証必須)
+```
+npm run create:scratch
+```
+# スクラッチ組織の削除
+スクラッチ組織を作り直したい時に。
+```
+npm run delete:scratch
+```
+# デプロイ（事前DevHub認証必須)
+```
+npm run deploy:scratch
+```
+# スクラッチ組織を開く
+```
+npm run open:scratch
+```
