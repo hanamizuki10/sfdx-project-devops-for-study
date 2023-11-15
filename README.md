@@ -17,6 +17,10 @@ sf org login web --set-default-dev-hub --alias devops-devhub
 ```
 npm run create:scratch
 ```
+# スクラッチ組織の作成のログインパスワード作成
+```
+npm run password:scratch
+```
 # スクラッチ組織の削除
 スクラッチ組織を作り直したい時に。
 ```
