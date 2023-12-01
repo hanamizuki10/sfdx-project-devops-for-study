@@ -1,8 +1,8 @@
 {
-  "name": "salesforce-app",
+  "name": "sfdx-project-devops-for-study",
   "private": true,
   "version": "1.0.0",
-  "description": "Salesforce App",
+  "description": "Salesforce DX Project DevOps勉強用 App",
   "scripts": {
     "lint": "eslint **/{aura,lwc}/**",
     "test": "npm run test:unit",
@@ -13,7 +13,12 @@
     "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "prettier:verify": "prettier --list-different \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "postinstall": "husky install",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "create:scratch": "sf org create scratch -f config/project-scratch-def.json --set-default --alias ${npm_package_name}-scratch --duration-days 30",
+    "password:scratch": "sf user password generate --target-org ${npm_package_name}-scratch",
+    "delete:scratch": "sf org delete scratch --target-org ${npm_package_name}-scratch --no-prompt",
+    "open:scratch": "sf org open --target-org ${npm_package_name}-scratch",
+    "deploy:scratch": "sf project deploy start --target-org ${npm_package_name}-scratch"
   },
   "devDependencies": {
     "@lwc/eslint-plugin-lwc": "^1.1.2",

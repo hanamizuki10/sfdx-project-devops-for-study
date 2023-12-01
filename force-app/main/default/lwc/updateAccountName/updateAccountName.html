@@ -1,0 +1,10 @@
+<template>
+  <lightning-card>
+      <div class="slds-m-around_medium">
+          <template if:true={account.data}>
+              <lightning-input label="Name" value={account.data.fields.Name.value} data-field="Name" class="slds-m-bottom_x-small"></lightning-input>
+              <lightning-button label="Update Account" variant="brand" onclick={handleClickUpdate}></lightning-button>
+          </template>
+      </div>
+  </lightning-card>
+</template>
