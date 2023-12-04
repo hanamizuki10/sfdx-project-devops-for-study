@@ -19,7 +19,7 @@ export default class HelloAccountName extends LightningElement {
     } else if (error) {
       this.greeting = undefined;
       LightningAlert.open({
-        message: '取引先の更新時に予期せぬエラーが発生しました。' + error.body.message,
+        message: '取引先の取得時に予期せぬエラーが発生しました。' + error.body.message,
         theme: 'error',
         label: '更新エラー',
       });
