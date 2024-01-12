@@ -15,7 +15,7 @@
     "postinstall": "husky install",
     "precommit": "lint-staged",
     "create:scratch": "sf org create scratch -f config/project-scratch-def.json --set-default --alias ${npm_package_name}-scratch --duration-days 30",
-    "password:scratch": "sf user password generate --target-org ${npm_package_name}-scratch",
+    "password:scratch": "sf org password generate --target-org ${npm_package_name}-scratch",
     "delete:scratch": "sf org delete scratch --target-org ${npm_package_name}-scratch --no-prompt",
     "open:scratch": "sf org open --target-org ${npm_package_name}-scratch",
     "deploy:scratch": "sf project deploy start --target-org ${npm_package_name}-scratch"
