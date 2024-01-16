@@ -10,3 +10,10 @@ package.xml
 
 # LWC Jest
 **/__tests__/**
+
+# 変更リストからメタデータを除外する
+## プロファイル
+**/*.profile-meta.xml
+## flow_orchestrationのレポート,レポートタイプ
+**/reports/*/flow_orchestration_*.report-meta.xml
+**/reportTypes/flow_orchestration_*.reportType-meta.xml
