@@ -1,6 +1,7 @@
 {
   "orgName": "hanamizuki10 company",
-  "edition": "Developer",
+  "sourceOrg": "00D5h0000091FMsEAM",
+  "hasSampleData": true,
   "features": ["EnableSetPasswordInApi"],
   "settings": {
     "lightningExperienceSettings": {
